@@ -1,0 +1,35 @@
+/* Ebonmane Ink Creative Studios - Main CSS File */
+/* This file imports all BEM component styles */
+
+/* Import Normalize - Universal baseline styles */
+@import url("./components/normalize.css");
+
+/* Import Layout - Main structural styles */
+@import url("./components/layout.css");
+
+/* Import Header Component */
+@import url("./components/header.css");
+
+/* Import Hero Component */
+@import url("./components/hero.css");
+
+/* Import Pillars Component */
+@import url("./components/pillars.css");
+
+/* Import Projects Component */
+@import url("./components/projects.css");
+
+/* Import Services Component */
+@import url("./components/services.css");
+
+/* Import Community Component */
+@import url("./components/community.css");
+
+/* Import About Component */
+@import url("./components/about.css");
+
+/* Import Journal Component */
+@import url("./components/journal.css");
+
+/* Import Footer Component */
+@import url("./components/footer.css");

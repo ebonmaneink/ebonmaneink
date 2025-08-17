@@ -1,0 +1,130 @@
+/* Projects Section - BEM */
+.projects {
+  background: var(--ebon-black);
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects__title {
+  font-size: 2.5rem;
+  color: var(--royal-gold);
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.projects__title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--royal-gold), var(--ink-blue));
+  border-radius: 2px;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  list-style: none;
+}
+
+.projects__item {
+  background: linear-gradient(
+    135deg,
+    rgba(46, 26, 71, 0.3),
+    rgba(38, 70, 83, 0.3)
+  );
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(249, 199, 79, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(249, 199, 79, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.projects__item:hover::before {
+  left: 100%;
+}
+
+.projects__item:hover {
+  transform: translateY(-5px);
+  border-color: var(--royal-gold);
+  box-shadow: 0 20px 40px rgba(249, 199, 79, 0.15);
+}
+
+.projects__item-title {
+  font-size: 1.5rem;
+  color: var(--moon-white);
+  margin-bottom: 1rem;
+}
+
+.projects__item-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.projects__item-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.projects__item-link {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: rgba(249, 199, 79, 0.1);
+  color: var(--royal-gold);
+  text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid var(--royal-gold);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.projects__item-link:hover {
+  background: var(--royal-gold);
+  color: var(--ebon-black);
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .projects__list {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__title {
+    font-size: 2rem;
+  }
+
+  .projects__item-actions {
+    flex-direction: column;
+  }
+
+  .projects__item-link {
+    text-align: center;
+  }
+}

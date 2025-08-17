@@ -1,0 +1,43 @@
+/* Main Layout - BEM */
+.main {
+  width: 100%;
+}
+
+/* Shared Section Title Styles */
+.pillars__title,
+.projects__title,
+.services__title,
+.community__title,
+.about__title,
+.journal__title,
+.footer__title {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Shared Button Styles */
+.hero__cta,
+.services__cta,
+.community__item-cta,
+.journal__cta {
+  font-family: "League Spartan", sans-serif;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--royal-gold);
+  color: var(--ebon-black);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}

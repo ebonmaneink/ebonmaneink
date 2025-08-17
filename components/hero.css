@@ -1,0 +1,162 @@
+/* Hero Section - BEM */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    var(--night-purple) 0%,
+    var(--ebon-black) 70%
+  );
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem 4rem;
+  margin-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23f9c74f" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+  opacity: 0.1;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.hero__logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 0 20px rgba(249, 199, 79, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--royal-gold), var(--moon-white));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  color: var(--royal-gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero__tagline {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--royal-gold), #e6b84a);
+  color: var(--ebon-black);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "League Spartan", sans-serif;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(249, 199, 79, 0.3);
+}
+
+.hero__cta--discord {
+  background: linear-gradient(135deg, var(--ink-blue), var(--night-purple));
+  color: var(--moon-white);
+}
+
+.hero__cta--discord:hover {
+  box-shadow: 0 10px 25px rgba(38, 70, 83, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 0;
+    padding: 4rem 2rem 3rem;
+  }
+
+  .hero__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero__tagline {
+    font-size: 1rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+}
