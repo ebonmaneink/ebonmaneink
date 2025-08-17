@@ -133,7 +133,7 @@ I'd love to connect and explore how we might work together.
 
 ## 📬 Connect With Me
 
-- **GitHub**: [@jordancampbell23](https://github.com/jordancampbell23)
+- **LinkedIn**: [Jordan Campbell](https://www.linkedin.com/in/campbell-jordan-c/)
 - **Discord**: [Join our Creative Community](https://discord.gg/Zypbg7ud3G)
 - **Ko-fi**: [Support the Work](https://ko-fi.com/ebonmane)
 - **Itch.io**: [Play our Games](https://ebonmaneink.itch.io/)
